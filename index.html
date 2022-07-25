@@ -11,9 +11,12 @@
 <body>
     
     <div id="app">
+
+        <h1 class="text-center mt-5">To Do List</h1>
+
         <div class="container my-5">
-            <label for="to-do" class="form-label">aggiungi cosa da fare</label>
-            <input type="text" id="to-do" class="form-control" v-model="input">
+            <label for="to-do" class="form-label">Aggiungi cosa da fare</label>
+            <input type="text" id="to-do" class="form-control" v-model="input" @keyup.enter="addTask">
 
             <button class="mt-3 btn btn-primary" @click="addTask">Add Task</button>
         </div>
