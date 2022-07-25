@@ -18,15 +18,11 @@
 
 
         <ul>
-            <li class="task" v-for="(toDo, index) in toDoList" @click="taskDone(index)">
-                {{toDo}}
+            <li class="task" v-for="(toDo, index) in toDoList" :class=" (toDo.done == true)? 'done': '' " @click="taskDone(index)">
+                {{toDo.name}}
                 <span @click="removeTask(index)">Elimina</span>
             </li>
         </ul>
-
-
-
-
     </div>
     
 
