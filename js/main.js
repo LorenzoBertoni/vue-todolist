@@ -45,6 +45,6 @@ const app = new Vue({
             } else {
                 this.toDoList[index].done = false;
             }
-        }
+        },
     }
 });
