@@ -24,9 +24,11 @@
         <div class="container">
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center" v-for="(toDo, index) in toDoList" @click="taskDone(index)">
-                    <h6 :class=" (toDo.done == true)? 'done': '' " >{{toDo.name}}</h6>
+                    <span :class=" (toDo.done == true)? 'done': '' " >{{toDo.name}}</span>
                     <button class="btn btn-danger" @click="removeTask(index)">Elimina</button>
                 </li>
+
+                <li v-if="toDoList.length == 0" class="list-group-item list-group-item-success">Hai completato tutte le task!</li>
             </ul>
         </div>
     </div>
