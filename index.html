@@ -10,7 +10,23 @@
 <body>
     
     <div id="app">
-        
+
+        <label for="to-do">aggiungi cosa da fare</label>
+        <input type="text" id="to-do" v-model="input">
+
+        <button @click="addTask">Add Task</button>
+
+
+        <ul>
+            <li class="task" v-for="(toDo, index) in toDoList" @click="taskDone(index)">
+                {{toDo}}
+                <span @click="removeTask(index)">Elimina</span>
+            </li>
+        </ul>
+
+
+
+
     </div>
     
 
